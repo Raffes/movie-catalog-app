@@ -6,7 +6,7 @@ O Movie Catalog App é um aplicativo móvel que permite aos usuários pesquisar 
   <tr>
     <td><img src="./assets/images/home.png" width="300"></td>
     <td><img src="./assets/images/movieDetails.png" width="300"></td>
-    <td><img src="./assets/images/search.png" width="300"></td>
+    <td><img src="./assets/images/seach.png" width="300"></td>
   </tr>
 </table>
 
