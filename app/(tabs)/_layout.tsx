@@ -77,8 +77,8 @@ const _Layout = () => {
                         />
                     )
                 }}
-            />
-            <Tabs.Screen
+            />d
+            {/* <Tabs.Screen
                 name='saved'
                 options={{
                     title: 'Saved',
@@ -105,7 +105,7 @@ const _Layout = () => {
                         />
                     )
                 }}
-            />
+            /> */}
         </Tabs>
     )
 }
