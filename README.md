@@ -2,9 +2,14 @@
 
 O Movie Catalog App é um aplicativo móvel que permite aos usuários pesquisar e visualizar informações sobre filmes. Ele utiliza a biblioteca React Native e o framework Expo para desenvolvimento multiplataforma.
 
-<img src="./assets/images/home.png" width="300">
-<img src="./assets/images/movieDetails.png" width="300">
-<img src="./assets/images/seach.png" width="300">
+<table>
+  <tr>
+    <td><img src="./assets/images/home.png" width="300"></td>
+    <td><img src="./assets/images/movieDetails.png" width="300"></td>
+    <td><img src="./assets/images/search.png" width="300"></td>
+  </tr>
+</table>
+
 
 ## Índice
 
