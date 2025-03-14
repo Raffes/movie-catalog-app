@@ -77,7 +77,7 @@ const _Layout = () => {
                         />
                     )
                 }}
-            />d
+            />
             {/* <Tabs.Screen
                 name='saved'
                 options={{
