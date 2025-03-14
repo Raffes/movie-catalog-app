@@ -1,50 +1,121 @@
-# Welcome to your Expo app 👋
+# Movie Catalog App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+O Movie Catalog App é um aplicativo móvel que permite aos usuários pesquisar e visualizar informações sobre filmes. Ele utiliza a biblioteca React Native e o framework Expo para desenvolvimento multiplataforma.
 
-## Get started
+## Índice
 
-1. Install dependencies
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Scripts Disponíveis](#scripts-disponíveis)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Créditos](#créditos)
+
+## Instalação
+
+Para instalar as dependências do projeto, execute:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+## Uso
+
+1. Inicie o aplicativo:
 
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+2. No output, você encontrará opções para abrir o aplicativo em:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   - [Build de desenvolvimento](https://docs.expo.dev/develop/development-builds/introduction/)
+   - [Emulador Android](https://docs.expo.dev/workflow/android-studio-emulator/)
+   - [Simulador iOS](https://docs.expo.dev/workflow/ios-simulator/)
+   - [Expo Go](https://expo.dev/go), um sandbox limitado para experimentar o desenvolvimento de aplicativos com Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Scripts Disponíveis
 
-## Get a fresh project
+- `npx expo start`: Inicia o servidor de desenvolvimento.
+- `npx expo start android`: Inicia o aplicativo no emulador Android.
+- `npx expo start ios`: Inicia o aplicativo no simulador iOS.
+- `npx expo start web`: Inicia o aplicativo no navegador.
 
-When you're ready, run:
+## Tecnologias Utilizadas
 
-```bash
-npm run reset-project
-```
+- React Native: Biblioteca para construir interfaces de usuário nativas para iOS e Android usando React.
+- Expo: Framework e plataforma para aplicativos React Native que facilita o desenvolvimento, a construção e a implantação de aplicativos.
+- TypeScript: Superset do JavaScript que adiciona tipos estáticos e outras funcionalidades avançadas.
+- Tailwind CSS: Biblioteca de utilitários CSS para estilização rápida e eficiente.
+- Hermes: Motor JavaScript otimizado para aplicativos React Native, que melhora o desempenho.
+- React Navigation: Biblioteca para navegação em aplicativos React Native.
+- Expo Router: Biblioteca para roteamento em aplicativos Expo.
+- Appwrite: Plataforma de backend como serviço (BaaS) para autenticação, banco de dados, armazenamento e muito mais.
+- MaskedView: Biblioteca para criar máscaras em componentes React Native.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Créditos
 
-## Learn more
+Este projeto de estudo é baseado no projeto [react-native-movie-app](https://github.com/adrianhajdin/react-native-movie-app). Agradecimento especial ao [adrianhajdin](https://github.com/adrianhajdin) por fornecer a base para este aplicativo.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Imagens do Aplicativo
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+<div id="slideshow">
+  <img src="./assets/images/home.png" class="slide" />
+  <img src="./assets/images/movieDetails.png" class="slide" />
+  <img src="./assets/images/seach.png" class="slide" />
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
 
-## Join the community
+<style>
+  #slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  .slide {
+    display: none;
+    width: 100%;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+</style>
 
-Join our community of developers creating universal apps.
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+  }
+</script>
