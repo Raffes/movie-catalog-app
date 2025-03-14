@@ -61,7 +61,7 @@ Este projeto de estudo é baseado no projeto [react-native-movie-app](https://gi
 <div id="slideshow">
   <img src="./assets/images/home.png" class="slide" />
   <img src="./assets/images/movieDetails.png" class="slide" />
-  <img src="./assets/images/seach.png" class="slide" />
+  <img src="./assets/images/search.png" class="slide" />
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
